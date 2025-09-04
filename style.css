@@ -120,6 +120,7 @@ p.blue {
   font-size: 14px;
   color: rgb(55, 65, 81);
   text-align: center;
+  margin-top: 1rem;
 }
 
 .author-info a {
@@ -129,7 +130,8 @@ p.blue {
 @media screen and (min-width: 640px) {
   body {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .mains {
@@ -159,7 +161,8 @@ p.blue {
 @media screen and (min-width: 1025px) {
   body {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
   .mains {
     display: grid;
