@@ -28,6 +28,7 @@ body {
 .mains {
   background-color: var(--semi-white);
   border-radius: 1.5rem;
+  width: 100%;
 }
 
 .intro {
@@ -75,7 +76,7 @@ p.blue {
   background-color: var(--torquise);
 }
 
-.last-mains-child {
+.mains>div:last-of-type {
   height: 368px;
 }
 
@@ -97,7 +98,7 @@ p.blue {
 
 .tag {
   background: linear-gradient(180deg, transparent, #00000030, #00000042, #00000055, #00000070, var(--black));
-  padding: 3rem 0 0 1.5rem;
+  padding: 2rem 0 0.5rem 1.5rem;
 }
 
 .tag>h3 {
@@ -125,24 +126,20 @@ p.blue {
   text-decoration: none;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 640px) {
   body {
     display: flex;
     justify-content: center;
   }
+
   .mains {
     display: grid;
-    grid-template: repeat(3, 300px) / repeat(3, 300px);
+    grid-template: repeat(3, 300px) / repeat(3, 1fr); 
     padding: 0;
   }
   
   .intro {
     grid-area: 1 / 1 / 2 / 4;
-    height: auto;
-  }
-  
-  .mains>div:not(.intro) {
-    height: auto;
   }
   
   .mains>div:nth-of-type(2) {
@@ -158,14 +155,28 @@ p.blue {
   }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1025px) {
   body {
     display: flex;
     justify-content: center;
   }
   .mains {
     display: grid;
-    grid-template: repeat(2, 300px) / repeat(4, 300px);
+    grid-template: repeat(2, 300px) / repeat(4, 1fr);
     padding: 0;
+    border: 1px solid;
+  }
+
+  .intro {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+
+  .mains>div:last-of-type {
+    grid-area: 1 / 1 / 2 / 2;
+    height: auto;
+  }
+
+  .mains>div:last-of-type {
+    grid-area: 2 / 4 / 3 / 5;
   }
 }
