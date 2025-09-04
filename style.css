@@ -118,8 +118,8 @@ p.blue {
 
 .author-info {
   font-size: 14px;
-  margin-top: 16px;
   color: rgb(55, 65, 81);
+  text-align: center;
 }
 
 .author-info a {
